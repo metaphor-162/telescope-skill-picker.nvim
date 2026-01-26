@@ -38,6 +38,12 @@ function M.show(opts)
         entry_maker = entry_maker,
       }),
       sorter = conf.generic_sorter(opts),
+      layout_strategy = "horizontal",
+      layout_config = {
+        horizontal = {
+          preview_width = 0.7,
+        },
+      },
       previewer = {
         preview = function(self, entry, status)
           -- Store window ID for scrolling
