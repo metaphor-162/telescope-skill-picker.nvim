@@ -5,13 +5,15 @@ Neovim plugin to search and interact with Agent Skills using Telescope.
 ## Features
 
 - Search skills by name and description.
-- Preview skill content within Telescope.
+- High-performance custom previewer (works even if treesitter is broken).
+- Large horizontal layout (70% preview width) for better readability.
 - Asynchronous metadata caching for instant performance.
 - Actions:
-  - `<CR>`: Open SKILL.md
+  - `<CR>`: Insert skill name at cursor
   - `<C-y>`: Copy skill name to clipboard
-  - `<C-i>`: Insert skill name at cursor
   - `<C-t>`: Open SKILL.md in a new tab
+  - `<C-e>`: Open SKILL.md in current window
+  - `<C-d>` / `<C-u>`: Scroll preview down/up
 - Manual cache refresh via `:SkillRefresh`.
 
 ## Requirements

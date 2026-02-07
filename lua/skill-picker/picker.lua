@@ -106,6 +106,15 @@ function M.show(opts)
           end
         end)
 
+        -- <C-e>: Edit in current window
+        map("i", "<C-e>", function()
+          local selection = action_state.get_selected_entry()
+          if selection then
+            actions.close(prompt_bufnr)
+            vim.cmd("edit " .. vim.fn.fnameescape(selection.path))
+          end
+        end)
+
         -- <C-u> / <C-d>: Scroll preview
         map({ "i", "n" }, "<C-u>", actions.preview_scrolling_up)
         map({ "i", "n" }, "<C-d>", actions.preview_scrolling_down)
@@ -117,4 +126,3 @@ function M.show(opts)
 end
 
 return M
-
