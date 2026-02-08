@@ -1,6 +1,7 @@
 # telescope-skill-picker.nvim
 
 Neovim plugin to search and interact with Agent Skills using Telescope.
+<img src="https://webfilebin-share.com/47743a08-8071-706d-22fb-f29c8292831b/img-skill-picker.png" alt="Telescope Skill Picker Screenshot" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid var(--color-sage);">
 
 ## Features
 
@@ -28,7 +29,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "metaphor/telescope-skill-picker.nvim", -- Replace with your actual repo
+  "metaphor-162/telescope-skill-picker.nvim", -- Replace with your actual repo
   dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
   config = function()
     require("skill-picker").setup({
@@ -59,6 +60,7 @@ If `skills_dir` is not provided in `setup()`, the plugin will look for the `SKIL
 ## Tips
 
 ### Reusing Skill Directories
+
 You can use symbolic links to reuse your skill directories across different environments or tools. For example, if you want to share your Gemini skills with another tool that expects them at `~/.copilot`:
 
 ```bash
